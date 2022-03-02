@@ -1,0 +1,6 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "appService.preDeployTask": "package:ScratchMvn",
+    "appService.deploySubpath": "target/ScratchMvn-1.0-SNAPSHOT.jar",
+    "appService.defaultWebAppToDeploy": "/subscriptions/398bfe82-5c9c-4798-9c18-02a3cc9b0db4/resourceGroups/sp-dev-rg-spdotcom/providers/Microsoft.Web/sites/sp-dev-webjob-sftplistener"
+}

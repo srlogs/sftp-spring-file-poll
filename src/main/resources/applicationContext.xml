@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/integration/sftp
+        https://www.springframework.org/schema/integration/sftp/spring-integration-sftp.xsd"
+        xmlns:int-sftp="http://www.springframework.org/schema/integration/sftp">
+
+    <!-- <context:component-scan base-package="com.in28minutes.spring.basics"/> -->
+    <beans:bean id="sftpSessionFactory"
+                class="org.springframework.integration.sftp.session.DefaultSftpSessionFactory">
+        <beans:property name="host" value="sftp.aspiresys.com"/>
+        <beans:property name="privateKey" value="classpath:META-INF/keys/sftpTest"/>
+        <beans:property name="privateKeyPassphrase" value="springIntegration"/>
+        <beans:property name="port" value="22"/>
+        <beans:property name="user" value="kermit"/>
+    </beans:bean>
+</beans>
